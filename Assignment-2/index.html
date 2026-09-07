@@ -3,10 +3,63 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Assignment 2</title>
+  <meta name="description" content="About Field Notes, a small digital journal for curious travelers and thoughtful observers.">
+  <link rel="stylesheet" href="styles.css">
+  <title>About Field Notes</title>
 </head>
 <body>
-  <h1>Assignment 2</h1>
-  <p>This is a placeholder page for Assignment 2.</p>
+  <header class="site-header">
+    <a class="logo" href="index.html" aria-label="Field Notes home">
+      <span class="logo-mark">FN</span>
+      <span>Field Notes</span>
+    </a>
+    <nav aria-label="Main navigation">
+      <a class="nav-link active" href="index.html">About</a>
+      <a class="nav-link" href="https://github.com/parshjadon/WebProgramming" target="_blank" rel="noreferrer">Repository</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="page-title">
+      <p class="eyebrow">A small project with a wide horizon</p>
+      <h1 id="page-title">Stories begin when we pay attention.</h1>
+      <p class="hero-intro">Field Notes is a quiet corner for collecting the places, details, and ideas that make an ordinary day worth remembering.</p>
+    </section>
+
+    <section class="about-grid" aria-label="About Field Notes">
+      <div class="section-label">
+        <span class="section-number">01</span>
+        <span>Our beginning</span>
+      </div>
+      <div class="copy">
+        <h2>Why I created this site</h2>
+        <p>I created Field Notes to make room for the small observations that usually disappear into the rush of a day. A handwritten note, a memorable street, or a new idea can become the beginning of something meaningful when it has a place to live.</p>
+        <p>This project is also an opportunity to practice building a web experience that feels personal and welcoming. I wanted the page to be simple to navigate, easy to read, and expressive without becoming distracting.</p>
+      </div>
+    </section>
+
+    <section class="about-grid accent-section" aria-label="Project motivation">
+      <div class="section-label">
+        <span class="section-number">02</span>
+        <span>The motivation</span>
+      </div>
+      <div class="copy">
+        <h2>Curiosity is a good reason to begin.</h2>
+        <p>I felt motivated to create this site because the best learning happens when a project connects technical practice with something human. Designing the structure, choosing a color palette, and shaping the writing all helped me think about how a visitor should feel while exploring a page.</p>
+        <p>Field Notes is intentionally unfinished in the best way: it can grow with new stories, photographs, and experiments. For now, it is a starting point and a reminder that thoughtful work often begins with noticing one small thing.</p>
+      </div>
+    </section>
+
+    <section class="connect" aria-labelledby="connect-title">
+      <p class="eyebrow">Keep exploring</p>
+      <h2 id="connect-title">Follow the project as it grows.</h2>
+      <a class="button" href="https://github.com/parshjadon/WebProgramming" target="_blank" rel="noreferrer">Visit the GitHub repository <span aria-hidden="true">↗</span></a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>Field Notes / Assignment 2</span>
+    <span>Made with curiosity.</span>
+  </footer>
 </body>
 </html>

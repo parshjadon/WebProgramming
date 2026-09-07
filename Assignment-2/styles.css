@@ -1,0 +1,255 @@
+/* Palette: Ink #24313A | Paper #F5F1E8 | Coral #E36B4D | Sage #9CAF88 | Mist #DCE7E3 */
+
+:root {
+  --ink: #24313a;
+  --paper: #f5f1e8;
+  --coral: #e36b4d;
+  --sage: #9caf88;
+  --mist: #dce7e3;
+  --line: rgba(36, 49, 58, 0.2);
+  --serif: Georgia, "Times New Roman", serif;
+  --sans: "Trebuchet MS", Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--sans);
+  line-height: 1.7;
+}
+
+a {
+  color: inherit;
+}
+
+.site-header,
+.site-footer {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1180px;
+  padding: 28px 6vw;
+}
+
+.logo {
+  align-items: center;
+  display: inline-flex;
+  font-family: var(--serif);
+  font-size: 1.2rem;
+  font-weight: bold;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.logo-mark {
+  align-items: center;
+  background: var(--coral);
+  border-radius: 50%;
+  color: var(--paper);
+  display: inline-flex;
+  font-family: var(--sans);
+  font-size: 0.7rem;
+  height: 34px;
+  justify-content: center;
+  letter-spacing: 0.08em;
+  width: 34px;
+}
+
+nav {
+  display: flex;
+  gap: 24px;
+}
+
+.nav-link {
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--coral);
+}
+
+main {
+  margin: 0 auto;
+  max-width: 1180px;
+  padding: 0 6vw;
+}
+
+.hero {
+  border-bottom: 1px solid var(--line);
+  max-width: 900px;
+  padding: 92px 0 105px;
+}
+
+.eyebrow {
+  color: var(--coral);
+  font-size: 0.76rem;
+  font-weight: bold;
+  letter-spacing: 0.15em;
+  margin: 0 0 20px;
+  text-transform: uppercase;
+}
+
+h1,
+h2 {
+  font-family: var(--serif);
+  font-weight: normal;
+  line-height: 1.08;
+  margin: 0;
+}
+
+h1 {
+  font-size: clamp(3.2rem, 8vw, 7rem);
+  letter-spacing: -0.03em;
+  max-width: 850px;
+}
+
+.hero-intro {
+  font-size: 1.2rem;
+  margin: 34px 0 0;
+  max-width: 520px;
+}
+
+.about-grid {
+  border-bottom: 1px solid var(--line);
+  display: grid;
+  gap: 48px;
+  grid-template-columns: minmax(150px, 0.65fr) 1.35fr;
+  padding: 84px 0;
+}
+
+.accent-section {
+  background: var(--mist);
+  margin: 0 -6vw;
+  padding-left: 6vw;
+  padding-right: 6vw;
+}
+
+.section-label {
+  align-items: flex-start;
+  display: flex;
+  font-size: 0.8rem;
+  gap: 14px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.section-number {
+  color: var(--coral);
+  font-family: var(--serif);
+  font-size: 1.2rem;
+}
+
+.copy {
+  max-width: 670px;
+}
+
+h2 {
+  font-size: clamp(2rem, 4vw, 3.6rem);
+  margin-bottom: 25px;
+}
+
+.copy p {
+  margin: 0 0 20px;
+  max-width: 620px;
+}
+
+.copy p:last-child {
+  margin-bottom: 0;
+}
+
+.connect {
+  padding: 115px 0 120px;
+  text-align: center;
+}
+
+.connect h2 {
+  margin: 0 auto 34px;
+  max-width: 600px;
+}
+
+.button {
+  background: var(--ink);
+  color: var(--paper);
+  display: inline-flex;
+  font-size: 0.82rem;
+  font-weight: bold;
+  gap: 14px;
+  letter-spacing: 0.06em;
+  padding: 15px 21px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background 180ms ease, transform 180ms ease;
+}
+
+.button:hover {
+  background: var(--coral);
+  transform: translateY(-3px);
+}
+
+.site-footer {
+  border-top: 1px solid var(--line);
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  opacity: 0.75;
+}
+
+@media (max-width: 640px) {
+  .site-header,
+  .site-footer {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 18px;
+    padding-bottom: 22px;
+    padding-top: 22px;
+  }
+
+  nav {
+    gap: 16px;
+  }
+
+  .hero {
+    padding: 62px 0 72px;
+  }
+
+  .hero-intro {
+    font-size: 1rem;
+  }
+
+  .about-grid {
+    display: block;
+    padding: 58px 0;
+  }
+
+  .section-label {
+    margin-bottom: 34px;
+  }
+
+  .accent-section {
+    margin-left: -6vw;
+    margin-right: -6vw;
+    padding-left: 6vw;
+    padding-right: 6vw;
+  }
+
+  .connect {
+    padding: 80px 0;
+  }
+
+  .button {
+    font-size: 0.72rem;
+  }
+}
