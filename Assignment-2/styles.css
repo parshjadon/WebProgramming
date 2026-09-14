@@ -1,665 +1,350 @@
 
 /*
-=========================================================
-                    COLOR PALETTE
-=========================================================
+====================================================
+COLOR PALETTE
+====================================================
 
-Midnight Blue:   #090B1A
+Dark Navy:       #0B1026
 Dark Purple:     #17132B
 Purple:          #8B5CF6
-Pink:            #EC4899
 Blue:            #38BDF8
+Pink:            #EC4899
 White:           #FFFFFF
-Light Text:      #CBD5E1
-Dark Text:       #94A3B8
+Light Gray:      #CBD5E1
 
-The website uses a dark background with purple,
-pink, and blue accents to create a modern design.
-=========================================================
+This color palette is used throughout the website
+for the background, text, navigation, and buttons.
+====================================================
 */
 
 
-/* =====================================================
-                    BASIC SETTINGS
-===================================================== */
+/*
+====================================================
+GENERAL PAGE STYLING
+====================================================
+*/
 
 * {
     box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #090B1A;
+    background-color: #0B1026;
     color: #FFFFFF;
-    overflow-x: hidden;
 }
 
 
-/* =====================================================
-                    NAVIGATION BAR
-===================================================== */
+/*
+====================================================
+NAVIGATION LAYOUT
+====================================================
 
-nav {
-    height: 80px;
-    padding: 0 8%;
+Flexbox is used here to place the logo on the left
+and the navigation links on the right.
+====================================================
+*/
+
+.navbar {
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
 
-    background-color: rgba(9, 11, 26, 0.9);
+    padding: 25px 8%;
 
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    background-color: #17132B;
 
-    position: relative;
-    z-index: 10;
+    border-bottom: 1px solid #8B5CF6;
 }
 
 
 /* Website logo */
-
 .logo {
     font-size: 28px;
     font-weight: bold;
-    letter-spacing: 2px;
 }
 
+
+/* Colored dot in logo */
 .logo span {
     color: #EC4899;
 }
 
 
 /* Navigation links */
+.navigation {
+    display: flex;
+    gap: 30px;
+}
 
+
+/* Navigation link styling */
 .navigation a {
-    color: #CBD5E1;
+    color: #FFFFFF;
     text-decoration: none;
-    margin-left: 35px;
-    font-size: 16px;
-    transition: 0.3s;
+    font-weight: bold;
 }
 
 
 /* Navigation hover effect */
-
 .navigation a:hover {
     color: #38BDF8;
 }
 
 
-/* =====================================================
-                    HERO SECTION
-===================================================== */
-
-.hero {
-    min-height: 650px;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    text-align: center;
-
-    padding: 80px 20px;
-
-    background:
-        radial-gradient(circle at 20% 30%, rgba(139, 92, 246, 0.35), transparent 30%),
-        radial-gradient(circle at 80% 70%, rgba(236, 72, 153, 0.25), transparent 30%),
-        linear-gradient(135deg, #090B1A, #17132B);
-}
-
-
-/* Small welcome text */
-
-.welcome {
-    color: #38BDF8;
-    font-size: 13px;
-    font-weight: bold;
-    letter-spacing: 4px;
-    margin-bottom: 15px;
-}
-
-
-/* Main heading */
-
-.hero h1 {
-    font-size: 70px;
-    margin: 10px 0;
-    line-height: 1.1;
-}
-
-
-/* Colored name */
-
-.hero h1 span {
-    display: block;
-
-    background: linear-gradient(
-        90deg,
-        #38BDF8,
-        #8B5CF6,
-        #EC4899
-    );
-
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-
-/* Hero description */
-
-.hero-text {
-    max-width: 650px;
-    color: #CBD5E1;
-    font-size: 19px;
-    line-height: 1.8;
-    margin-top: 25px;
-}
-
-
-/* =====================================================
-                    MAIN BUTTON
-===================================================== */
-
-.main-button {
-    margin-top: 35px;
-
-    padding: 16px 35px;
-
-    color: #FFFFFF;
-    text-decoration: none;
-
-    font-weight: bold;
-
-    border-radius: 50px;
-
-    background: linear-gradient(
-        90deg,
-        #2563EB,
-        #8B5CF6,
-        #EC4899
-    );
-
-    box-shadow: 0 10px 35px rgba(139, 92, 246, 0.35);
-
-    transition: 0.3s;
-}
-
-
-/* Button hover */
-
-.main-button:hover {
-    transform: translateY(-5px);
-
-    box-shadow:
-        0 15px 40px rgba(236, 72, 153, 0.4);
-}
-
-
-/* =====================================================
-                INTRODUCTION SECTION
-===================================================== */
-
-.intro-card {
-    max-width: 950px;
-
-    margin: -50px auto 80px;
-
-    padding: 55px;
-
-    background: linear-gradient(
-        145deg,
-        #17132B,
-        #11162B
-    );
-
-    border-radius: 25px;
-
-    border: 1px solid rgba(139, 92, 246, 0.3);
-
-    box-shadow:
-        0 25px 80px rgba(0, 0, 0, 0.5);
-
-    position: relative;
-    z-index: 2;
-}
-
-
-/* Decorative line */
-
-.intro-card::before {
-    content: "";
-
-    display: block;
-
-    width: 70px;
-    height: 4px;
-
-    margin-bottom: 25px;
-
-    border-radius: 10px;
-
-    background: linear-gradient(
-        90deg,
-        #38BDF8,
-        #EC4899
-    );
-}
-
-
-/* Section heading */
-
-.intro-card h2 {
-    font-size: 32px;
-    margin-top: 0;
-}
-
-
-/* Paragraphs */
-
-.intro-card p {
-    color: #CBD5E1;
-    line-height: 1.9;
-    font-size: 17px;
-}
-
-
-/* =====================================================
-                    FEATURE SECTION
-===================================================== */
-
-.features {
-    max-width: 1050px;
-
-    margin: auto;
-
-    padding: 0 20px 100px;
-
-    display: flex;
-
-    gap: 25px;
-}
-
-
-/* Feature cards */
-
-.feature-card {
-    flex: 1;
-
-    padding: 35px;
-
-    background-color: #11162B;
-
-    border-radius: 20px;
-
-    border: 1px solid rgba(255, 255, 255, 0.08);
-
-    transition: 0.3s;
-}
-
-
-/* Different colored top borders */
-
-.feature-card:nth-child(1) {
-    border-top: 4px solid #38BDF8;
-}
-
-.feature-card:nth-child(2) {
-    border-top: 4px solid #8B5CF6;
-}
-
-.feature-card:nth-child(3) {
-    border-top: 4px solid #EC4899;
-}
-
-
-/* Card hover */
-
-.feature-card:hover {
-    transform: translateY(-10px);
-
-    background-color: #171D38;
-
-    box-shadow:
-        0 20px 50px rgba(0, 0, 0, 0.4);
-}
-
-
-/* Icons */
-
-.icon {
-    font-size: 40px;
-    margin-bottom: 15px;
-}
-
-
-/* Card headings */
-
-.feature-card h3 {
-    font-size: 22px;
-}
-
-
-/* Card text */
-
-.feature-card p {
-    color: #94A3B8;
-    line-height: 1.7;
-}
-
-
-/* =====================================================
-                    ABOUT PAGE HEADER
-===================================================== */
+/*
+====================================================
+ABOUT PAGE HEADER
+====================================================
+*/
 
 .about-header {
     text-align: center;
 
-    padding: 100px 20px 70px;
+    padding: 70px 20px;
 
-    background:
-        radial-gradient(
-            circle at 50% 20%,
-            rgba(139, 92, 246, 0.3),
-            transparent 45%
-        );
-}
-
-
-/* About heading */
-
-.about-header h1 {
-    font-size: 60px;
-    margin: 15px 0;
-}
-
-
-/* Colored About text */
-
-.about-header h1 span {
     background: linear-gradient(
-        90deg,
-        #38BDF8,
-        #EC4899
+        135deg,
+        #17132B,
+        #312E81
     );
+}
 
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+
+/* Small heading */
+.welcome {
+    color: #38BDF8;
+
+    font-size: 13px;
+
+    letter-spacing: 3px;
+
+    font-weight: bold;
+}
+
+
+/* Main heading */
+.about-header h1 {
+    font-size: 50px;
+    margin: 10px 0;
+}
+
+
+/* Highlight part of heading */
+.about-header h1 span {
+    color: #EC4899;
 }
 
 
 /* Subtitle */
-
-.about-header > p:last-child {
-    color: #94A3B8;
-    font-size: 18px;
+.about-header p {
+    color: #CBD5E1;
 }
 
 
-/* =====================================================
-                    ABOUT CARD
-===================================================== */
+/*
+====================================================
+MAIN FLEXBOX LAYOUT
+====================================================
 
-.about-card {
-    max-width: 1050px;
+This is the main layout required for the assignment.
 
-    margin: 0 auto 90px;
+display: flex places the profile section and the
+content section next to each other.
 
-    padding: 55px;
+gap adds space between the two sections.
+====================================================
+*/
 
+.about-layout {
     display: flex;
 
-    gap: 70px;
+    max-width: 1100px;
 
-    align-items: center;
+    margin: 60px auto;
 
-    background:
-        linear-gradient(
-            145deg,
-            #17132B,
-            #10162C
-        );
+    gap: 50px;
 
-    border-radius: 30px;
+    padding: 20px;
 
-    border: 1px solid rgba(139, 92, 246, 0.25);
-
-    box-shadow:
-        0 30px 80px rgba(0, 0, 0, 0.5);
+    align-items: flex-start;
 }
 
 
-/* =====================================================
-                    PROFILE SECTION
-===================================================== */
+/*
+====================================================
+LEFT SIDE - PROFILE SECTION
+====================================================
+*/
 
-.profile {
-    min-width: 280px;
+.profile-section {
+    width: 35%;
+
+    background-color: #17132B;
+
+    padding: 40px;
 
     text-align: center;
+
+    border-radius: 20px;
+
+    border-top: 4px solid #8B5CF6;
 }
 
 
-/* Profile image */
-
-.profile img {
-    width: 240px;
-    height: 240px;
+/* Profile picture */
+.profile-image {
+    width: 220px;
+    height: 220px;
 
     object-fit: cover;
 
     border-radius: 50%;
 
     border: 5px solid #8B5CF6;
-
-    padding: 5px;
-
-    box-shadow:
-        0 0 40px rgba(139, 92, 246, 0.5);
 }
 
 
 /* Profile name */
-
-.profile h2 {
-    font-size: 25px;
+.profile-section h2 {
     margin-bottom: 5px;
 }
 
 
-/* Profile description */
-
-.profile p {
+/* Profile title */
+.profile-title {
     color: #38BDF8;
 }
 
 
-/* =====================================================
-                    ABOUT TEXT
-===================================================== */
+/*
+====================================================
+RIGHT SIDE - CONTENT SECTION
+====================================================
+*/
 
-.about-text {
-    flex: 1;
+.about-content {
+    width: 65%;
+
+    background-color: #17132B;
+
+    padding: 40px;
+
+    border-radius: 20px;
+
+    border-top: 4px solid #EC4899;
 }
 
 
-/* Heading */
+/* Content heading */
+.about-content h2 {
+    color: #38BDF8;
 
-.about-text h2 {
-    font-size: 35px;
-
-    background: linear-gradient(
-        90deg,
-        #FFFFFF,
-        #A78BFA
-    );
-
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    font-size: 30px;
 }
 
 
-/* Paragraphs */
-
-.about-text p {
+/* Paragraph styling */
+.about-content p {
     color: #CBD5E1;
 
-    line-height: 1.9;
-
     font-size: 17px;
+
+    line-height: 1.8;
+
+    margin-bottom: 20px;
 }
 
 
-/* =====================================================
-                    SOCIAL SECTION
-===================================================== */
-
-.connect {
-    text-align: center;
-
-    padding: 80px 20px 110px;
-
-    background:
-        radial-gradient(
-            circle at center,
-            rgba(37, 99, 235, 0.15),
-            transparent 60%
-        );
-}
-
-
-/* Connect heading */
-
-.connect h2 {
-    font-size: 40px;
-}
-
-
-/* Connect text */
-
-.connect > p:not(.welcome) {
-    color: #94A3B8;
-}
-
-
-/* Social buttons */
+/*
+====================================================
+SOCIAL MEDIA LINKS
+====================================================
+*/
 
 .social-links {
-    margin-top: 35px;
+    display: flex;
+
+    gap: 15px;
+
+    margin-top: 20px;
 }
 
 
-/* Social links */
-
+/* Social media buttons */
 .social-links a {
-    display: inline-block;
+    padding: 12px 25px;
 
-    margin: 8px;
-
-    padding: 14px 30px;
-
-    border-radius: 50px;
+    background-color: #8B5CF6;
 
     color: #FFFFFF;
 
     text-decoration: none;
 
-    border: 1px solid #8B5CF6;
-
-    background-color: rgba(139, 92, 246, 0.1);
-
-    transition: 0.3s;
+    border-radius: 25px;
 }
 
 
-/* Social hover */
-
+/* Button hover effect */
 .social-links a:hover {
-    background: linear-gradient(
-        90deg,
-        #2563EB,
-        #8B5CF6
-    );
-
-    transform: translateY(-4px);
-
-    box-shadow:
-        0 10px 30px rgba(139, 92, 246, 0.4);
+    background-color: #EC4899;
 }
 
 
-/* =====================================================
-                    FOOTER
-===================================================== */
+/*
+====================================================
+FOOTER
+====================================================
+*/
 
 footer {
     text-align: center;
 
     padding: 25px;
 
-    background-color: #060713;
+    background-color: #17132B;
 
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    color: #CBD5E1;
 
-    color: #64748B;
+    margin-top: 60px;
 }
 
 
-/* =====================================================
-                    MOBILE DESIGN
-===================================================== */
+/*
+====================================================
+RESPONSIVE FLEXBOX LAYOUT
+====================================================
+
+On smaller screens, the profile and content sections
+are stacked vertically instead of side-by-side.
+====================================================
+*/
 
 @media (max-width: 750px) {
 
-    /* Navigation */
-    nav {
-        padding: 20px;
-    }
-
-    .navigation a {
-        margin-left: 12px;
-    }
-
-
-    /* Hero heading */
-    .hero h1 {
-        font-size: 45px;
-    }
-
-
-    /* Features become vertical */
-    .features {
+    /* Stack the main layout vertically */
+    .about-layout {
         flex-direction: column;
     }
 
 
-    /* About section becomes vertical */
-    .about-card {
-        flex-direction: column;
-
-        margin: 20px;
-
-        padding: 35px;
+    /* Make both sections full width */
+    .profile-section,
+    .about-content {
+        width: 100%;
     }
 
 
-    /* About heading */
+    /* Reduce navigation spacing */
+    .navigation {
+        gap: 15px;
+    }
+
+
+    /* Reduce main heading size */
     .about-header h1 {
-        font-size: 45px;
-    }
-
-
-    /* Introduction card */
-    .intro-card {
-        margin: -30px 20px 60px;
-
-        padding: 30px;
+        font-size: 40px;
     }
 
 }
-

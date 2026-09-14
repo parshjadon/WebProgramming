@@ -3,25 +3,19 @@
 <html>
 
 <head>
-    <!-- Title displayed in the browser tab -->
+    <!-- Title shown in the browser tab -->
     <title>About Me | Parsh Jadon</title>
 
-    <!-- Connect the page to the external CSS stylesheet -->
+    <!-- External stylesheet -->
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-    <!-- Decorative background circles -->
-    <div class="circle circle-one"></div>
-    <div class="circle circle-two"></div>
+    <!-- Navigation section -->
+    <nav class="navbar">
 
-
-    <!-- ================= NAVIGATION BAR ================= -->
-
-    <nav>
-
-        <!-- Website logo -->
+        <!-- Website logo/name -->
         <div class="logo">
             PJ<span>.</span>
         </div>
@@ -35,104 +29,101 @@
     </nav>
 
 
-    <!-- ================= ABOUT HEADER ================= -->
-
-    <section class="about-header">
+    <!-- Main page heading -->
+    <header class="about-header">
 
         <p class="welcome">GET TO KNOW ME</p>
 
         <h1>About <span>Me</span></h1>
 
         <p>
-            A little bit about my journey, motivation, and goals.
+            Learn more about my interests, motivation,
+            and goals in computer science.
         </p>
 
-    </section>
+    </header>
 
 
-    <!-- ================= ABOUT CARD ================= -->
+    <!--
+        Main Flexbox layout.
+        The image section and content section are placed
+        next to each other using Flexbox.
+    -->
+    <main class="about-layout">
 
-    <section class="about-card">
 
-        <!-- Profile image -->
-        <div class="profile">
+        <!-- Left side of the Flexbox layout -->
+        <section class="profile-section">
 
-            <!-- Replace this image with your own photo -->
-            <img src="images/about.jpg" alt="Photo of Parsh">
+            <!-- Profile image -->
+            <img src="images/about.jpg"
+                 alt="Profile photo"
+                 class="profile-image">
 
             <h2>Parsh Jadon</h2>
 
-            <p>Computer Science Student</p>
+            <p class="profile-title">
+                Computer Science Student
+            </p>
 
-        </div>
+        </section>
 
 
-        <!-- About text -->
-        <div class="about-text">
+        <!-- Right side of the Flexbox layout -->
+        <section class="about-content">
 
             <h2>My Story</h2>
 
             <!-- First paragraph -->
             <p>
-                I created this website because I wanted to build
-                something that introduces who I am while allowing
-                me to practice the fundamentals of web development.
-                A personal website is also a great way to present
-                my interests and goals in one place.
+                I created this website as a way to introduce myself
+                and share some information about my interests,
+                experiences, and goals. It also gave me an opportunity
+                to practice designing webpages using HTML and CSS.
             </p>
 
             <!-- Second paragraph -->
             <p>
-                I am passionate about computer science and technology.
-                I enjoy learning how software works and using
-                programming to solve problems. Working on different
-                projects motivates me to keep learning and improving.
+                I am interested in computer science, programming,
+                and technology. I enjoy learning how software works
+                and using programming to solve different problems.
+                Working on projects helps me improve my technical skills.
             </p>
 
             <!-- Third paragraph -->
             <p>
-                My motivation comes from the idea that there is always
-                something new to learn. Whether it is programming,
-                artificial intelligence, or web development, I enjoy
-                challenging myself and turning new ideas into projects.
+                I am motivated by the idea of continuously learning
+                new technologies and improving my skills. In the future,
+                I hope to create more useful applications and continue
+                developing my knowledge in software development.
             </p>
 
-        </div>
 
-    </section>
+            <!-- Social media links -->
+            <h3>Connect With Me</h3>
 
+            <div class="social-links">
 
-    <!-- ================= SOCIAL MEDIA ================= -->
+                <!-- Replace with your real LinkedIn URL -->
+                <a href="https://www.linkedin.com/"
+                   target="_blank">
+                    LinkedIn
+                </a>
 
-    <section class="connect">
+                <!-- Replace with your real GitHub URL -->
+                <a href="https://github.com/"
+                   target="_blank">
+                    GitHub
+                </a>
 
-        <p class="welcome">LET'S CONNECT</p>
+            </div>
 
-        <h2>Find Me Online</h2>
+        </section>
 
-        <p>
-            Feel free to connect with me and check out some of my work.
-        </p>
-
-
-        <!-- Replace these links with your actual profiles -->
-        <div class="social-links">
-
-            <a href="https://www.linkedin.com/in/parsh-jadon-330a4324b/" target="_blank">
-                LinkedIn ↗
-            </a>
-
-            <a href="https://github.com/parshjadon" target="_blank">
-                GitHub ↗
-            </a>
-
-        </div>
-
-    </section>
+    </main>
 
 
-    <!-- ================= FOOTER ================= -->
-
+    <!-- Footer section -->
     <footer>
 
         <p>
