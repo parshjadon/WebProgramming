@@ -348,3 +348,64 @@ are stacked vertically instead of side-by-side.
     }
 
 }
+/* Main color variables for the default theme. */
+:root {
+  --background-color: #ffffff;
+  --text-color: #222222;
+  --header-color: #2d6a4f;
+  --nav-color: #40916c;
+  --link-color: #ffffff;
+  --card-color: #f1f8f4;
+  --border-color: #b7d8c5;
+  --button-color: #2d6a4f;
+  --button-text-color: #ffffff;
+}
+
+/* Alternate dark theme colors. */
+.dark-theme {
+  --background-color: #181818;
+  --text-color: #f2f2f2;
+  --header-color: #111111;
+  --nav-color: #333333;
+  --link-color: #f2f2f2;
+  --card-color: #242424;
+  --border-color: #555555;
+  --button-color: #f2f2f2;
+  --button-text-color: #181818;
+}
+
+/* Uses the variables so the whole page changes theme. */
+body {
+  background-color: var(--background-color) !important;
+  color: var(--text-color) !important;
+}
+
+header {
+  background-color: var(--header-color) !important;
+  color: var(--link-color) !important;
+}
+
+nav {
+  background-color: var(--nav-color) !important;
+}
+
+nav a {
+  color: var(--link-color) !important;
+}
+
+section,
+article,
+.card {
+  background-color: var(--card-color) !important;
+  border-color: var(--border-color) !important;
+}
+
+/* Button used to switch the color theme. */
+#theme-toggle {
+  background-color: var(--button-color) !important;
+  color: var(--button-text-color) !important;
+  border: 1px solid var(--border-color) !important;
+  padding: 8px 12px;
+  margin: 10px;
+  cursor: pointer;
+}
