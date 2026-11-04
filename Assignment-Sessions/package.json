@@ -1,0 +1,16 @@
+{
+  "name": "session-login-assignment",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Commented Express and MySQL login with session user data, profile, and logout",
+  "main": "loginsessionsampleclean.js",
+  "scripts": {
+    "start": "node loginsessionsampleclean.js",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "express-session": "^1.18.1",
+    "mysql2": "^3.14.0"
+  }
+}

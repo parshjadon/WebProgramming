@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login</title>
+</head>
+<body>
+    <main>
+        <h1>Login</h1>
+        <form action="/login" method="POST">
+            <p>
+                <label for="username">Username</label><br>
+                <input type="text" name="username" id="username" autocomplete="username" maxlength="50" required>
+            </p>
+            <p>
+                <label for="password">Password</label><br>
+                <input type="password" name="password" id="password" autocomplete="current-password" maxlength="1024" required>
+            </p>
+            <button type="submit">Log in</button>
+        </form>
+        <p>Need an account? <a href="/register.html">Register here</a></p>
+        <p><a href="/profile">View your profile</a></p>
+    </main>
+</body>
+</html>
